@@ -1,0 +1,18 @@
+require.config({
+	paths:{
+		'angular':'../../vendors/angular/angular',
+		'angular-route':'../../vendors/angular/angular-ui-router'
+	},
+	shim:{
+		'angular':{
+			'exports':'angular'
+		},
+		'angular-route':{
+			'exports':'angular-route',
+			'deps':['angular']
+		}
+	},
+	deps:[
+	'bootstrap-start'
+	]
+})

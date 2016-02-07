@@ -1,0 +1,39 @@
+<div ng-controller="contactListController">
+	<p class="text-center"> Contact List Application</p>
+	<div class="container">
+		<div class="row">
+		  	<div class="col-md-3">
+			  	<div class="form-group">
+	    			<input type="text" class="form-control" ng-model="userName"  placeholder="Enter your name">
+	  			</div>
+		  	</div>
+		  	<div class="col-md-3">
+			  	<div class="form-group">
+					<input type="text" class="form-control" ng-model="userNumber"  placeholder="Enter number">
+				</div>
+		  	</div>
+		  	<div class="col-md-3">
+		  		<div class="form-group">
+		  			<button type="button" class="btn btn-primary" ng-click="add()">Add</button>
+		  			<button type="button" class="btn btn-warning" ng-click="update()">Update</button>
+		  		</div>
+		  	</div>
+		</div>
+		<table class="table table-striped">
+			<thead>
+				<th>User Name</th>
+				<th>User Number</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in userContacts">
+					<td>{{user.name}}</td>
+					<td>{{user.phone}}</td>
+					<td><button type="button" class="btn btn-info" ng-click="edit(user._id)">Edit</button></td>
+					<td><span class="glyphicon glyphicon-remove-sign" style="font-size:23px" aria-hidden="true" ng-click="delete(user._id)"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

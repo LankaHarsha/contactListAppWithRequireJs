@@ -1,0 +1,5 @@
+define([
+	'Common/routeConfig'
+], function(){
+	
+});
